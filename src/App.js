@@ -7,6 +7,7 @@ import'./fonts/Korolev-Medium.otf'
 // import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
 import ReactModal from 'react-modal';
 import Youtube from '@u-wave/react-youtube';
+import Modal from 'react-bootstrap/Modal'
 
 
 import Pagination from "react-pagination-library";
@@ -248,11 +249,11 @@ console.log(total)
               
             </Carousel>
         </div>
-      <ReactModal 
+        <ReactModal 
         isOpen={modal}
         style={{overlay:{ position: 'fixed',
-        width: 1500,
-        height: 900,
+        width: 1400,
+        height: 840,
         top: 100,
         left: 150,
         right: 0,
@@ -267,6 +268,23 @@ console.log(total)
         src={`https://www.youtube.com/embed/${youtubeVideo}`}>
         </iframe>
       </ReactModal>
+        {/* <Modal 
+        show={modal}
+        onHide={() => setModal(false)}
+        dialogClassName="modal-90w"
+        backgroundColor = "black"
+        display= "flex"
+        justifyContent ="center"
+        // aria-labelledby="example-modal-sizes-title-vcenter" 
+        centered
+      >
+        {/* <Youtube video={youtubeVideo}
+                  autoplay
+        />  */}
+        {/* <iframe width="1280" height="720"
+        src={`https://www.youtube.com/embed/${youtubeVideo}`}>
+        </iframe>
+      </Modal> */} */}
       <Navbar className="nav3" bg="light" expand="sm" fixed="bottom">
       <Pagination className="page"
             currentPage={pageNumber}

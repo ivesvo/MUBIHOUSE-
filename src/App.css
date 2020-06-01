@@ -1,6 +1,4 @@
-.middle{
-    margin-top: 60px;
-}
+
 
 @font-face {
 
@@ -61,8 +59,8 @@
 
 .nav2{
     margin-top:69px;
-    font-size: 20px;
-    height: 30px;
+    font-size: 30px;
+    height: 50px;
     border: 1px solid black;
     align-items: center;
 }
@@ -136,14 +134,16 @@
   }
 
 .movie{
-    margin-top: 8rem;
+    margin-top: 9rem;
     min-height: 1080px;
+    margin-bottom: 4rem;
+    
 }
 
 .nav3{
   margin-top:69px;
-  font-size: 20px;
-  height: 50px;
+  font-size: 30px;
+  height: 60px;
   border: 1px solid black;
   align-items: center;
 }
@@ -164,6 +164,7 @@
 .moviecard:hover .card-content{
   opacity:1;
   color: white;
+  
 }
 
 
@@ -178,8 +179,22 @@
 
 .moviecard{
   margin: 20px;
+  
+ 
 }
 
 .image-container:hover{
   background-color:black;
 }
+
+.moviecard .card{
+  border: 2px solid black;
+
+}
+
+.page{
+  display:flex;
+
+}
+
+

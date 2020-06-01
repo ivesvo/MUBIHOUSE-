@@ -30,7 +30,7 @@ export default function MovieCard(props) {
                     <div>
                 <Card.Body>
                   
-                  <Card.Title> {props.movie.original_title}</Card.Title>
+                  <Card.Title><h4>{props.movie.original_title}</h4> </Card.Title>
               
                   
                 </Card.Body>
