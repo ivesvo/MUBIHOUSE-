@@ -11,6 +11,7 @@
 
 .App{
     font-family: 'Korolev';
+    min-height:1080px;
    
     
 }
@@ -140,3 +141,6 @@
     min-height: 1080px;
 }
 
+.container{
+
+}
