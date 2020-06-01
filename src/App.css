@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+.middle{
+    margin-top: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+
+    font-family: 'Korolev';
+    src: local('Korolev-Medium'), url(./fonts/Korolev-Medium.otf) format('otf');
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App{
+    font-family: 'Korolev';
+   
+    
+}
+
+.movielistrow{
+    display: flex;
+}
+
+.logo{
+    border-color: black;
+
+    width: 300px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.genre{
+    border-color: black;
+    width: 300px;
+    font-size: 30px;
+}
+.moviecard{
+    margin: 20px;
+}
+
+.nav{
+    border: 1px solid black;
+    height: 70px;
+    align-items: center;
+}
+
+.form .mr-sm-2{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100px;
+   
+}
+.genre-sidebar{
+    display:flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    justify-content: end;
+}
+
+.nav2{
+    margin-top:69px;
+    font-size: 20px;
+    height: 30px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+
+.ticker-wrap {
+    position: fixed;
+      left: 0;
+    width: 100%;
+    overflow: hidden;
+  
+    box-sizing: content-box;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .ticker-wrap .ticker {
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 150s;
+    animation-duration: 150s;
   }
-  to {
-    transform: rotate(360deg);
+
+ 
+
+  @-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
   }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+.ticker-wrap:hover .ticker 
+{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
 }
+
+ .ticker-wrap .ticker__item {
+    display: inline-block;
+    padding: 2rem;
+    font-size: 6rem;
+    color: white;
+
+  }
+
+.movie{
+    background-color: lightgray;
+    min-height: 1080px;
+}
+
