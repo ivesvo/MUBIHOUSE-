@@ -20,16 +20,18 @@ import {Navbar, Nav, Collapse, NavDropdown} from 'react-bootstrap';
 const apiKey = process.env.REACT_APP_APIKEY;
 
 function App() {
+  
   let [movieList, setMovieList] = useState(null);
   let [movieGenre, setMovieGenre] = useState(null)
   let [pageNumber, setPageNumber] = useState(1)
   let [total,setTotalPage]=useState(null)
   let [currentGenres,setCurrentGenres]=useState(null)
-  let [currentKeyword, setCurrentKeyword] = useState(null)
+  let [originalList, setOriginalList] = useState(null)
+  // let [currentKeyword, setCurrentKeyword] = useState(null)
 
   
   const getNowShowingMovie = async(pageNum,genres) =>{
-    setCurrentKeyword ()
+    // setCurrentKeyword ()
     setCurrentGenres(genres)
     let url=""
     
@@ -49,6 +51,7 @@ function App() {
     let result = await data.json();
     console.log(url,"URLLLLLLLLLLLLLLL")
     setMovieList(result.results)
+    setOriginalList(result.results)
     console.log(result,"dataaaaaaaaaaaaaa")
     setTotalPage(result.total_pages)
 
@@ -66,11 +69,23 @@ console.log(total)
 
   
   }
-  const getMovieFromKeyword= async(keyword)=>{
-    console.log(keyword)
+  
 
-  let tempList = movieList.filter(movie => movie.original_title.includes(keyword))
-  setMovieList(tempList)
+  let keyword = ''
+  const searchByKeyword = (e) =>{
+    e.preventDefault()
+    console.log("hihifsdfdsgdff")
+    searchTheKeyword(keyword);
+  }
+  const searchTheKeyword = (keyword) =>{
+    console.log("gsearch search search", keyword)
+    if (keyword === ''){
+      setMovieList(originalList)
+      return;
+    }
+    let filteredList = movieList.filter(movie => movie.title.toLowerCase().includes(keyword.toLowerCase()))
+    setMovieList(filteredList)
+
   }
 
 
@@ -131,12 +146,6 @@ console.log(total)
     sliderArray2=splitUp(newArray[1],2)
   }
    
-  
- 
-
-  
-  
-  
   return (
     <div className="App">
       
@@ -174,10 +183,11 @@ console.log(total)
                     
                   </NavDropdown>
           </Nav>
-          <Form className="form" inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e)=>getMovieFromKeyword(e.target.value)}/>
+          <Form className="form" inline onSubmit={(e)=>searchByKeyword(e)}>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e)=>keyword=e.target.value}/>
             {/* <Button variant="outline-success">Search</Button> */}
           </Form>
+          <Button variant="dark" type="submit">Search</Button>
         </Navbar.Collapse>
         
       </Navbar>
