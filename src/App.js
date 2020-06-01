@@ -204,7 +204,7 @@ console.log(total)
                   </NavDropdown>
           </Nav>
           <Form className="form" inline onSubmit={(e)=>searchByKeyword(e)}>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e)=>{
+            <FormControl type="text" placeholder="Don't Search Haven't Fixed Yet" className="mr-sm-2" onChange={(e)=>{
               console.log("key",e.target.value)
               searchTheKeyword(e.target.value)}}/>
             {/* <Button variant="outline-success">Search</Button> */}
@@ -251,19 +251,19 @@ console.log(total)
       <ReactModal 
         isOpen={modal}
         style={{overlay:{ position: 'fixed',
-        width:1280,
-        height:720,
-        top: 200,
-        left: 200,
+        width: 1500,
+        height: 900,
+        top: 100,
+        left: 150,
         right: 0,
         bottom: 0,
         zIndex: 1234,
-        backgroundColor: 'rgba(255, 255, 255, 0.75)'}, content:{}}}
+        backgroundColor: 'black'}, content:{}}}
         onRequestClose={()=>setModal(false)}>
         {/* <Youtube video={youtubeVideo}
                   autoplay
         />  */}
-        <iframe width="1024" height="576"
+        <iframe width="1280" height="720" backgroundColor = "black"
         src={`https://www.youtube.com/embed/${youtubeVideo}`}>
         </iframe>
       </ReactModal>
