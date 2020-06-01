@@ -148,7 +148,8 @@
   height: 50px;
   border: 1px solid black;
   align-items: center;
+}
 
-  
-
+.moviebadge{
+  margin-right: 10px;
 }

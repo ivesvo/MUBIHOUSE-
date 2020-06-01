@@ -4,8 +4,9 @@ import MovieList from './components/MovieList'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import {Container, Button, Col, Form, FormControl,Carousel, Card, Accordion, eventKey} from 'react-bootstrap';
 import'./fonts/Korolev-Medium.otf'
-import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
-
+// import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
+import ReactModal from 'react-modal';
+import Youtube from '@u-wave/react-youtube';
 
 
 import Pagination from "react-pagination-library";
@@ -20,13 +21,18 @@ import {Navbar, Nav, Collapse, NavDropdown} from 'react-bootstrap';
 const apiKey = process.env.REACT_APP_APIKEY;
 
 function App() {
-  
+  let keyword = ''
   let [movieList, setMovieList] = useState(null);
   let [movieGenre, setMovieGenre] = useState(null)
   let [pageNumber, setPageNumber] = useState(1)
   let [total,setTotalPage]=useState(null)
   let [currentGenres,setCurrentGenres]=useState(null)
   let [originalList, setOriginalList] = useState(null)
+  let [modal, setModal] = useState(false)
+  let [youtubeVideo, setYoutubeVideo] = useState(null)
+  let [search, setSearch] = useState(null)
+  
+
   // let [currentKeyword, setCurrentKeyword] = useState(null)
 
   
@@ -71,11 +77,12 @@ console.log(total)
   }
   
 
-  let keyword = ''
+ 
   const searchByKeyword = (e) =>{
     e.preventDefault()
-    console.log("hihifsdfdsgdff")
-    searchTheKeyword(keyword);
+    console.log("hihifsdfdsgdff", keyword)
+    setSearch(keyword);
+    searchTheKeyword(search);
   }
   const searchTheKeyword = (keyword) =>{
     console.log("gsearch search search", keyword)
@@ -88,7 +95,15 @@ console.log(total)
 
   }
 
-
+  let openModal = async (movieId) =>{
+    let url  =`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=en-US`
+    let data = await fetch(url)
+    let result = await data.json();
+    setYoutubeVideo(result.results[0].key)
+  
+    console.log(result)
+    setModal(true);
+  }
 
   useEffect(() => {
     // getNowShowingMovie();
@@ -145,6 +160,11 @@ console.log(total)
     sliderArray1=splitUp(newArray[0],2)
     sliderArray2=splitUp(newArray[1],2)
   }
+
+  if (movieList === undefined)
+  {
+    return <div>Loading</div>
+  }
    
   return (
     <div className="App">
@@ -184,7 +204,9 @@ console.log(total)
                   </NavDropdown>
           </Nav>
           <Form className="form" inline onSubmit={(e)=>searchByKeyword(e)}>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e)=>keyword=e.target.value}/>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e)=>{
+              console.log("key",e.target.value)
+              searchTheKeyword(e.target.value)}}/>
             {/* <Button variant="outline-success">Search</Button> */}
           </Form>
           <Button variant="dark" type="submit">Search</Button>
@@ -203,7 +225,7 @@ console.log(total)
               sliderArray1.map(arr=>{
                 return(
             <Carousel.Item>
-            <MovieList movieList = {arr} genreFromApp = {movieGenre}/>
+            <MovieList movieList = {arr} genreFromApp = {movieGenre} openModalFromApp={openModal}/>
             </Carousel.Item>
                 )
               })
@@ -217,7 +239,7 @@ console.log(total)
               sliderArray2.map(arr=>{
                 return(
             <Carousel.Item>
-            <MovieList movieList = {arr} genreFromApp = {movieGenre}/>
+            <MovieList movieList = {arr} genreFromApp = {movieGenre} openModalFromApp={openModal}/>
             </Carousel.Item>
                 )
               })
@@ -226,7 +248,25 @@ console.log(total)
               
             </Carousel>
         </div>
-      
+      <ReactModal 
+        isOpen={modal}
+        style={{overlay:{ position: 'fixed',
+        width:1280,
+        height:720,
+        top: 200,
+        left: 200,
+        right: 0,
+        bottom: 0,
+        zIndex: 1234,
+        backgroundColor: 'rgba(255, 255, 255, 0.75)'}, content:{}}}
+        onRequestClose={()=>setModal(false)}>
+        {/* <Youtube video={youtubeVideo}
+                  autoplay
+        />  */}
+        <iframe width="1024" height="576"
+        src={`https://www.youtube.com/embed/${youtubeVideo}`}>
+        </iframe>
+      </ReactModal>
       <Navbar className="nav3" bg="light" expand="sm" fixed="bottom">
       <Pagination className="page"
             currentPage={pageNumber}
