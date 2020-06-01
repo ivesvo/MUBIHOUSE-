@@ -139,14 +139,15 @@ console.log(total)
   
   return (
     <div className="App">
-      <Navbar className="nav2 ticker-wrap" bg="light" expand="sm">
+      
+      <Navbar className="nav2 ticker-wrap" bg="light" expand="sm" fixed="top">
         <div className="ticker">
         Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing 
         </div>
 
       </Navbar>
-     
       <Navbar className="nav" bg="light" expand="sm" fixed="top">
+        
         
 
               <div className="logo" href="#home">MUBIHAUS</div>
@@ -179,6 +180,7 @@ console.log(total)
             {/* <Button variant="outline-success">Search</Button> */}
           </Form>
         </Navbar.Collapse>
+        
       </Navbar>
   
    
