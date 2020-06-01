@@ -142,9 +142,8 @@ console.log(total)
       
       <Navbar className="nav2 ticker-wrap" bg="light" expand="sm" fixed="top">
         <div className="ticker">
-        Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing 
+        Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ Now showing ✴  기생충 ✴  Now showing ✴  기생충✴  Now showing ✴  기생충 ✴ 
         </div>
-
       </Navbar>
       <Navbar className="nav" bg="light" expand="sm" fixed="top">
         
@@ -218,7 +217,7 @@ console.log(total)
             </Carousel>
         </div>
       
-      <Navbar className="nav" bg="light" expand="sm" fixed="bottom">
+      <Navbar className="nav3" bg="light" expand="sm" fixed="bottom">
       <Pagination className="page"
             currentPage={pageNumber}
             totalPages={total}

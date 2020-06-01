@@ -58,6 +58,7 @@
 .form{
     display: flex;
     justify-content: end;
+ 
 }
 
 .nav2{
@@ -139,4 +140,15 @@
 .movie{
     margin-top: 8rem;
     min-height: 1080px;
+}
+
+.nav3{
+  margin-top:69px;
+  font-size: 20px;
+  height: 50px;
+  border: 1px solid black;
+  align-items: center;
+
+  
+
 }
