@@ -139,8 +139,15 @@ console.log(total)
   
   return (
     <div className="App">
+      <Navbar className="nav2 ticker-wrap" bg="light" expand="sm">
+        <div className="ticker">
+        Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing 
+        </div>
+
+      </Navbar>
      
       <Navbar className="nav" bg="light" expand="sm" fixed="top">
+        
 
               <div className="logo" href="#home">MUBIHAUS</div>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -173,15 +180,7 @@ console.log(total)
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <Navbar className="nav2 ticker-wrap" bg="light" expand="sm">
-        <div className="ticker">
-        Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing ✴  Now showing 
-        </div>
-
-           
-
-           
-      </Navbar>
+      
       
       
   
