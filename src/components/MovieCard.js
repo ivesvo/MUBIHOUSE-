@@ -6,7 +6,7 @@ export default function MovieCard(props) {
     let movie = props.movie;
     let genre = props.genreFromMovieList
     return (
-        <Card className="moviecard" style={{ width: '20rem'}}>
+        <Card className="moviecard" style={{ width: '25rem'}}>
                 <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`} />
                 <Card.Body>
                   <Card.Title> {props.movie.original_title}</Card.Title>

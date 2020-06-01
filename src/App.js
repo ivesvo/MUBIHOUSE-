@@ -194,7 +194,7 @@ console.log(total)
     
    
 
-        <div className="movie">
+        <div className="container movie">
           <Carousel
           animationSpeed={1500}
           autoPlay={3000}
