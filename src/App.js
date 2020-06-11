@@ -121,9 +121,18 @@ console.log(total)
     }
 
     function splitUp(arr, n) {
-      if(arr.length===0 || arr.length%2 !== 0)
+      let indexToSplit = Math.round(arr.length/2);
+      let first = arr.slice(0, indexToSplit);
+      let second = arr.slice(indexToSplit);
+      console.log(first);
+      console.log(second);
+      return [first, second];
+
+
+
+      if(!arr || arr.length===0 || arr.length%2 !== 0)
       {
-        return;
+        return [[], []];
       }
       var rest = arr.length % n, // how much to divide
           restUsed = rest, // to keep track of the division over the elements
@@ -219,9 +228,11 @@ console.log(total)
 
       <div className="container-fluid movie">
           <Carousel
-          animationSpeed={1500}
-          autoPlay={3000}
-          stopAutoPlayOnHover>
+          animationSpeed={1200}
+          autoPlay={6000}
+          // stopAutoPlayOnHover
+          interval={null}
+          >
             {
               sliderArray1.map(arr=>{
                 return(
@@ -235,7 +246,7 @@ console.log(total)
               
             </Carousel>
 
-            <Carousel>
+            <Carousel interval={null}>
             {
               sliderArray2.map(arr=>{
                 return(
