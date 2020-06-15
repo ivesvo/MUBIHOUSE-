@@ -214,7 +214,7 @@ console.log(total)
                   </NavDropdown>
           </Nav>
           <Form className="form" inline onSubmit={(e)=>searchByKeyword(e)}>
-            <FormControl type="text" placeholder="Don't Search Haven't Fixed Yet" className="mr-sm-2" onChange={(e)=>{
+            <FormControl type="text" placeholder="Search..." className="mr-sm-2" onChange={(e)=>{
               console.log("key",e.target.value)
               searchTheKeyword(e.target.value)}}/>
             {/* <Button variant="outline-success">Search</Button> */}
